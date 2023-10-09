@@ -1,0 +1,24 @@
+{% extends "root.html" %}
+{% block main %}
+<main class="banner">
+    <section style="text-align: center;">
+        <h2 style="font-size: xx-large;">Welcome to Facial Emotion Recognition</h2>
+        <p style="margin: 1em 30em; font-size: large;">This application detects human emotions from facial expressions from an image.</p>
+        <p style="margin: 1em 30em; font-size: large;">Give it a try... upload an image or video.</p>
+        <p style="margin: 1em 30em; font-size: large;"></p>
+        <div style="margin: 1em 0em;">
+            <h3>Upload an Image</h3>
+            <form action="/" method="post" enctype="multipart/form-data">
+                <input type="file" name="image" accept="image/*" class="link" required><br>
+                <input type="submit" name="submit" value="Upload Image" class="link">
+            </form>
+        </div>
+        {% if prediction %}
+        <div style="margin-top: 1em 0em;">
+            <img src="{{image_path}}" alt="" style="max-width: 250px; max-height: 250px; border: solid;">
+            <p style="font-size: larger; margin-top: 1em; color: darkgreen;">Predicted Emotion: {{prediction}}</p>
+        </div>
+        {% endif %}
+    </section>
+</main>
+{% endblock %}

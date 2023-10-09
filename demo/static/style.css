@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: gray;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+ul, nav{
+    list-style: none;
+}
+.banner{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 77.5vh;
+    background-color: white;
+    text-align: center;
+    justify-content: center;
+    padding: 2em;
+}
+h3{
+    color: gray;
+}
+.link{
+    padding: 0.5em;
+    background-color: gray;
+    border-color: black;
+    border: solid;
+    color: black;
+    min-width: 100px;
+}
+.linkC{
+    padding: 0em 0.5em;
+    background-color: gray;
+    border-color: black;
+    border: solid;
+    color: black;
+}
+.link:hover, .linkC:hover{
+    background-color: white;
+    color: black;
+    transition: 0.2s ease-out;
+}
+.overlap{
+    color: darkred;
+}
+.noverlap{
+    color: gray;
+}
+dt{
+    display: inline-block;
+    text-align: left;
+    min-width: 100px;
+}
+dd{  
+    display: inline-block;
+    text-align: left;
+    min-width: 150px;
+}
